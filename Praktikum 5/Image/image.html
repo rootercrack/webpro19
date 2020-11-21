@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <style>
+        select, img {
+            width: 250px;
+            height: auto;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body>
+<h2>Pilihlah Hewan kesukaan </h2>
+    <select id="changeImage" onchange="change_image()">
+        <option disabled selected>Pilihlah Hewan kesukaan kalian</option>
+        <option value="hiu" >Ayam</option>
+        <option value="trex">Burung</option>
+        <option value="harimau">Gajah</option>
+        <option value="singa">Badak</option>
+        <option value="kobra">Merpati</option>
+        <option value="buaya">Rajawali</option>
+    </select>
+    <br/>
+    <br/>
+    <img id="gambar" src="" alt="Pilih Hewan diatas untuk melihat hewan kesukaan anda!" width="100px" height="auto">
+    <script>
+
+        function change_image() {
+            let images = document.getElementById("changeImage").value;
+            let gambar = document.getElementById("gambar");
+            if (images == "Ayam"){
+                gambar.src="ayam.png";
+                alert(`Ini adalah foto Ayam ${images}`);
+            }else if (images == "Burung"){
+                gambar.src="burung.png";
+                alert(`Ini adalah foto Burung ${images}`);
+            }else if (images == "Gajah"){
+                gambar.src="gajah.png";
+                alert(`Ini adalah foto Gajah ${images}`);
+            }else if (images == "Badak"){
+                gambar.src="badak.png";
+                alert(`Ini adalah foto Badak ${images}`);
+            }else if (images == "Merpati"){
+                gambar.src="merpati.png";
+                alert(`Ini adalah foto Merpati ${images}`);
+            }else if (images == "Rajawali"){
+                gambar.src="rajawali.png";
+                alert(`Ini adalah foto Rajawali ${images}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
+
